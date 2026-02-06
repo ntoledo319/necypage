@@ -130,4 +130,4 @@ No license. This code is free like the coffee at the convention. Take it. We don
 
 ---
 
-*Built with love, sleep deprivation, energy drinks, and the kind of chaotic devotion that only exists between people who got sober together and refuse act like my actual fucking family.*
+*Built with love, sleep deprivation, energy drinks, and the kind of chaotic devotion that only exists between people who got sober together and refuse to act like my actual fucking family.*
