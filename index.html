@@ -869,76 +869,87 @@
         });
 
         /* ── Calendar ─────────────────────────────────── */
+        var calEvents = [
+            {
+                title: 'NECYPAA 36 Zombie Prom',
+                start: '20260213T183000',
+                end: '20260214T020000',
+                startZ: '20260213T233000Z',
+                endZ: '20260214T070000Z',
+                location: 'Enfield United Church of Christ, 1295 Enfield St, Enfield, CT 06082',
+                description: 'Zombie Prom — Hosted by NECYPAA 36 & The Bay State Bid\\nHype 6:30-7:00 PM\\nMeeting 7:00-8:00 PM\\nDance 8:00 PM - Dawn\\nSuggested Contribution: $15\\nhttps://www.necypaact.com',
+                allDay: false
+            },
+            {
+                title: 'Host Committee Elections — NECYPAA CT',
+                start: '20260215T140000',
+                end: '20260215T150000',
+                startZ: '20260215T190000Z',
+                endZ: '20260215T200000Z',
+                location: 'Zoom',
+                description: 'NECYPAA CT Host Committee Elections\\nZoom: https://us06web.zoom.us/j/5692382899?omn=86491828124',
+                allDay: false
+            },
+            {
+                title: 'NECYPAA 36 — 36th Northeast Conference of Young People in AA',
+                start: '20261231',
+                end: '20270104',
+                startZ: '20261231',
+                endZ: '20270104',
+                location: 'Hartford Marriott Downtown, Hartford, CT',
+                description: 'NECYPAA 36 — Four-day sober convention\\nFirst NECYPAA hosted in Hartford\\nFirst four-day NECYPAA\\nhttps://www.necypaact.com',
+                allDay: true
+            }
+        ];
+
         function addToCalendar() {
-            const eventTitle = "NECYPAA 36 Zombie Prom";
-            const eventDetails = "Save the Date — Zombie Prom!\n\nHosted by NECYPAA 36 and The Bay State Bid for NECYPAA\n\nSchedule:\nHype 6:30-7:00 PM\nMeeting 7:00-8:00 PM\nDance 8:00 PM - Dawn\n\nSuggested Contribution: $15\n\nMore info: https://www.necypaact.com";
-            const eventLocation = "Enfield United Church of Christ, 1295 Enfield St, Enfield, CT 06082";
+            var icsContent = createMultiICS(calEvents);
+            var blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8' });
+            var url = URL.createObjectURL(blob);
 
-            const eventStart = "20260213T183000";
-            const eventEnd = "20260214T020000";
+            var userAgent = navigator.userAgent.toLowerCase();
+            var isIOS = /iphone|ipad|ipod/.test(userAgent);
 
-            // Detect device and platform
-            const userAgent = navigator.userAgent.toLowerCase();
-            const isIOS = /iphone|ipad|ipod/.test(userAgent);
-            const isAndroid = /android/.test(userAgent);
-
-            // iOS - use webcal for Apple Calendar
             if (isIOS) {
-                const icsContent = createICS(eventTitle, eventStart, eventEnd, eventDetails, eventLocation);
-                const blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8' });
-                const url = URL.createObjectURL(blob);
                 window.open(url, '_blank');
                 return;
             }
 
-            // Android - use Google Calendar intent
-            if (isAndroid) {
-                const startTime = "20260213T233000Z";
-                const endTime = "20260214T070000Z";
-                const googleCalUrl = `https://www.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(eventTitle)}&details=${encodeURIComponent(eventDetails)}&location=${encodeURIComponent(eventLocation)}&dates=${startTime}/${endTime}`;
-                window.open(googleCalUrl, '_blank');
-                return;
-            }
-
-            // Desktop - offer choice
-            const icsContent = createICS(eventTitle, eventStart, eventEnd, eventDetails, eventLocation);
-            const blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8' });
-            const url = URL.createObjectURL(blob);
-
-            // Try to download ICS file
-            const link = document.createElement('a');
+            // Android + Desktop — download ICS with all 3 events
+            var link = document.createElement('a');
             link.href = url;
-            link.download = 'necypaa-zombie-prom.ics';
+            link.download = 'necypaa-36-events.ics';
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
-
-            // Also offer Google Calendar as backup
-            setTimeout(() => {
-                if (confirm('Would you also like to add to Google Calendar?')) {
-                    const googleCalUrl = `https://www.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(eventTitle)}&details=${encodeURIComponent(eventDetails)}&location=${encodeURIComponent(eventLocation)}&dates=20260213T233000Z/20260214T070000Z`;
-                    window.open(googleCalUrl, '_blank');
-                }
-            }, 500);
+            showToast('3 events added to calendar');
         }
 
-        function createICS(title, start, end, description, location) {
-            const now = new Date();
-            const dtstamp = now.toISOString().replace(/[-:]/g, '').replace(/\.\d{3}/, '');
-            const uid = dtstamp + '-' + Math.random().toString(36).slice(2) + '@necypaact.com';
-            return `BEGIN:VCALENDAR
-VERSION:2.0
-PRODID:-//NECYPAAC//Event//EN
-BEGIN:VEVENT
-UID:${uid}
-DTSTAMP:${dtstamp}
-DTSTART;TZID=America/New_York:${start}
-DTEND;TZID=America/New_York:${end}
-SUMMARY:${title}
-DESCRIPTION:${description.replace(/\n/g, '\\n')}
-LOCATION:${location}
-END:VEVENT
-END:VCALENDAR`;
+        function createMultiICS(events) {
+            var now = new Date();
+            var dtstamp = now.toISOString().replace(/[-:]/g, '').replace(/\.\d{3}/, '');
+            var lines = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//NECYPAACT//Events//EN'];
+
+            events.forEach(function(evt) {
+                var uid = dtstamp + '-' + Math.random().toString(36).slice(2) + '@necypaact.com';
+                lines.push('BEGIN:VEVENT');
+                lines.push('UID:' + uid);
+                lines.push('DTSTAMP:' + dtstamp);
+                if (evt.allDay) {
+                    lines.push('DTSTART;VALUE=DATE:' + evt.start);
+                    lines.push('DTEND;VALUE=DATE:' + evt.end);
+                } else {
+                    lines.push('DTSTART;TZID=America/New_York:' + evt.start);
+                    lines.push('DTEND;TZID=America/New_York:' + evt.end);
+                }
+                lines.push('SUMMARY:' + evt.title);
+                lines.push('DESCRIPTION:' + evt.description);
+                lines.push('LOCATION:' + evt.location);
+                lines.push('END:VEVENT');
+            });
+
+            lines.push('END:VCALENDAR');
+            return lines.join('\r\n');
         }
     </script>
 </body>
