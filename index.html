@@ -309,25 +309,32 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
+            gap: 6px;
+            min-width: 48px;
+            height: 48px;
+            padding: 0 14px;
+            border-radius: 100px;
             border: none;
-            background: rgba(255,255,255,0.12);
-            color: rgba(255,255,255,0.7);
+            background: rgba(255,255,255,0.22);
+            color: #fff;
             cursor: pointer;
             transition: transform 0.15s, background 0.2s;
             z-index: 1;
+            font-family: var(--font);
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.3px;
+            text-transform: uppercase;
         }
 
         .event-share-btn:active {
             transform: scale(0.9);
-            background: rgba(255,255,255,0.2);
+            background: rgba(255,255,255,0.32);
         }
 
         .event-share-btn .icon-sm {
-            width: 16px;
-            height: 16px;
+            width: 20px;
+            height: 20px;
         }
 
         /* ── Primary CTA (inline) ─────────────────────── */
@@ -568,7 +575,7 @@
         /* ── Share Menu ───────────────────────────────── */
         .share-menu {
             position: absolute;
-            top: 52px;
+            top: 64px;
             right: 12px;
             background: rgba(30,30,50,0.95);
             backdrop-filter: blur(12px);
@@ -581,8 +588,8 @@
             gap: 2px;
             z-index: 10;
             box-shadow: 0 8px 24px rgba(0,0,0,0.3);
-            min-width: 170px;
-            max-height: 280px;
+            min-width: 200px;
+            max-height: 340px;
             overflow-y: auto;
             -webkit-overflow-scrolling: touch;
         }
@@ -594,12 +601,12 @@
         .share-option {
             display: flex;
             align-items: center;
-            gap: 10px;
-            padding: 10px 14px;
-            border-radius: 8px;
+            gap: 12px;
+            padding: 14px 16px;
+            border-radius: 10px;
             text-decoration: none;
             color: rgba(255,255,255,0.9);
-            font-size: 13px;
+            font-size: 15px;
             font-weight: 600;
             font-family: var(--font);
             border: none;
@@ -615,8 +622,8 @@
         }
 
         .share-option .icon-sm {
-            width: 16px;
-            height: 16px;
+            width: 20px;
+            height: 20px;
             flex-shrink: 0;
         }
 
@@ -658,6 +665,7 @@
         <section class="event-hero fade-up fade-up-d1" id="event-section">
             <button class="event-share-btn" id="share-btn" aria-label="Share event" type="button">
                 <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+                Share
             </button>
             <div class="share-menu" id="share-menu">
                 <a class="share-option" id="share-whatsapp" target="_blank" rel="noopener">
