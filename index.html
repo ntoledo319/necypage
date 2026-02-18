@@ -354,7 +354,7 @@
         /* ── Action Cards Grid ────────────────────────── */
         .actions-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr;
             gap: 10px;
             flex-shrink: 0;
         }
@@ -396,9 +396,6 @@
         }
 
         /* Color-coded action cards */
-        .action-card--teal {
-            background: linear-gradient(135deg, #2a9d8f 0%, #21867a 100%);
-        }
         .action-card--indigo {
             background: linear-gradient(135deg, #5a67d8 0%, #4c51bf 100%);
         }
@@ -641,17 +638,8 @@
             Pre-Register Now
         </a>
 
-        <!-- Secondary Actions: Hotel + Calendar -->
+        <!-- Secondary Actions: Calendar + Share -->
         <div class="actions-grid fade-up fade-up-d3">
-            <a href="https://www.marriott.com/event-reservations/reservation-link.mi?id=1770049957031&key=GRP&app=resvlink"
-               class="action-card action-card--teal" target="_blank" rel="noopener">
-                <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
-                    <polyline points="9 22 9 12 15 12 15 22"/>
-                </svg>
-                <span class="action-label">Book Hotel</span>
-            </a>
-
             <button class="action-card action-card--indigo" onclick="addToCalendar()">
                 <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <rect x="3" y="4" width="18" height="18" rx="2"/>
