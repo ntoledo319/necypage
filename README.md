@@ -4,14 +4,16 @@
 
 ## What Is This
 
-A single `index.html` file that took more engineering effort than the entire convention budget. It's a mobile-first landing page for a regional young people's convention, and it has:
+A single `index.html` file that took more engineering effort than the entire convention budget. Nobody asked for this. Not the committee. Not the advisory. Not the guy who runs the website we're linking to (Update: I have since been elected Website Chair, a title with comedic potential I certainly won't abuse in future READMEs). I opened a text editor at 2am because I couldn't sleep and now we have a full web application with platform-aware calendar integration and a share menu that respects the Eleventh Tradition. The committee found out about this project when I dropped it in the Business chat with a 3-paragraph justification nobody requested, because I don't believe in half measures and I definitely don't believe in asking permission.
+
+It's a mobile-first landing page for a regional young people's convention, and it has:
 
 - A cosmic neon hero card with zero images because even CSS gradients were too much commitment for us
 - A button that says "Pre-Register" (it links to a website that also says "Pre-Register")
 - A hotel booking link (because apparently we needed a whole card for one hyperlink)
 - A calendar button with platform detection logic more complex than the 4-day convention schedule
 - A sticky bottom bar because we looked at what every billion-dollar app does and said "yeah we need that too, for our two buttons"
-- A share menu with 10 platforms that shares a text message we wrote at 2am while arguing about whether insurance is a personality trait
+- A share button that opens a bottom sheet with 10 platforms because we couldn't decide which ones to cut and now it's a feature
 
 ## Tech Stack
 
@@ -27,13 +29,11 @@ A single `index.html` file that took more engineering effort than the entire con
 
 ```
 necysite/
-├── index.html    ← the entire application. the whole thing. that's it.
-├── isa2-15.JPG   ← a flyer we looked at once for color inspiration. not actually used.
-├── zp1.JPG       ← the zombie prom flyer. honorably discharged. gone. reduced to atoms.
-└── README.md     ← you are here. you are trapped. there is no escape
+├── index.html    ← the entire application. 895 lines. one file. no regrets.
+└── README.md     ← you are here. you are trapped. there is no escape.
 ```
 
-> We deleted every image. We deleted the election link. The hero card is now five CSS gradients pretending to be a neon nightclub. Information density per byte is now technically infinite because there are zero bytes of image data. We are ascended.
+> We deleted every image. We deleted the election link. We deleted the NEB section. The hero card is now five CSS gradients pretending to be a neon nightclub. The `neb1.png` avatar? Gone. The `zp1.JPG` flyer? Cremated. The `isa2-15.JPG` convention flyer? We looked at it once for color inspiration and then pretended it doesn't exist. Information density per byte is now technically infinite because there are zero bytes of image data being served. We are ascended.
 
 ## Features Nobody Asked For But We Built Anyway
 
@@ -41,7 +41,7 @@ necysite/
 We replaced an 851KB flyer with approximately 847 lines of CSS featuring a five-stop deep space gradient (`#0d0221 → #150734 → #261447 → #1a0a3e → #0a1628`), four radial gradient light bursts in magenta and cyan, a neon magenta border with inset glow, text shadows that pulse with the power of a thousand suns, and a fireworks emoji that took 12 seconds to pick. It weighs 0KB. We are completely unhinged.
 
 ### Anonymity-Safe Share Menu
-The share button opens a scrollable dropdown with 10 platforms: WhatsApp, iMessage/SMS, Email, Telegram, FB Messenger, Signal, Discord, Snapchat, GroupMe, and Kik. No Twitter. No Facebook. No Instagram. Because this is AA and anonymity matters more than engagement metrics. The menu itself has a deep purple gradient background, neon magenta border, and outer glow shadow — because even the share menu needs to match the vibe. Platforms with direct URL schemes open natively. The rest copy to clipboard with a toast. We wrote 50 lines of JavaScript to avoid using the native Web Share API because it includes Twitter and we have principles (that we discovered at 1:45am).
+The share button lives in the actions grid now because it was floating in the hero card like a haunted artifact and breaking the visual flow. When you tap it, a bottom sheet slides up from the bottom of the screen with 10 platform options displayed as pill-shaped buttons: WhatsApp, iMessage/SMS, Email, Telegram, FB Messenger, Signal, Discord, Snapchat, GroupMe, and Kik. No Twitter. No Facebook. No Instagram. Because this is AA and anonymity matters more than engagement metrics. The bottom sheet has a deep purple gradient background with a neon magenta border and outer glow shadow — because even the share menu needs to match the vibe. Platforms with direct URL schemes open natively. The rest copy to clipboard with a toast. We wrote 50 lines of JavaScript to avoid using the native Web Share API because it includes Twitter and we have principles (that we discovered at 1:45am).
 
 ### Platform-Aware Calendar Integration
 The "Add to Calendar" button detects whether you're on iOS, Android, or desktop, and serves you the appropriate calendar format. This function is 52 lines long. The convention is one weekend. The code-to-event ratio is approaching unity.
@@ -73,7 +73,8 @@ We don't know what we're doing. We never have. We keep showing up and somehow th
 - **Theme:** Cosmic neon purple/magenta/cyan because we looked at a New Year's flyer and said "yes, gradients"
 - **Hero card:** Zero images. Pure CSS. Five gradients. Four radial bursts. One emoji. Infinite vibes.
 - **Accent color:** `#e040fb` (neon magenta) — previously red-orange, now we are cosmically ascended
-- **Share menu:** Now matches the hero card aesthetic. Deep purple. Neon border. Tighter. Cleaner. Still 10 platforms because we cannot stop.
+- **Share button:** Moved from floating hero overlay to actions grid. Now opens a bottom sheet instead of a dropdown. Three-column grid: Book Hotel | Add to Calendar | Share Event. Integrated. Clean. Still 10 platforms because we cannot stop.
+- **Action cards:** Removed the chunky colored icon boxes. Now subtle glass cards with inline icons. Less stock-image-button-y. More refined. We grew up.
 - **Calendar:** Exports 1 event now. Just the convention. The Zombie Prom is dead. The elections are over. We are streamlined.
 
 ## How to Run
@@ -118,12 +119,14 @@ You don't. This is a dictatorship with a pulse-glowing button. But if you really
 - ~~Zombie Prom still mentioned in calendar data~~ — Removed. The event is over. It's done. We have moved on. The calendar now exports 1 event: the convention. We are no longer time capsules.
 - ~~Host Committee Elections in calendar and NEB section~~ — Also removed. The elections happened. They're over. The NEB section is gone. The calendar is clean. We are streamlined.
 - ~~Share menu looked like it was from a different website~~ — Restyled with the deep purple gradient, neon magenta border, and tighter proportions. Now it looks like it belongs. Barely.
+- ~~Share button was a floating pill in the hero card~~ — It popped out and broke the visual flow. Moved it to the actions grid as a third card. Now it's Hotel | Calendar | Share. The share menu is now a bottom sheet that slides up instead of a dropdown. We deleted 35 lines of floating button CSS. The hero card is clean. The page flows. We are at peace.
+- ~~Action cards had chunky colored icon boxes~~ — Looked like stock image buttons from a 2019 UI kit. Removed the icon boxes entirely. Now they're subtle glass cards with inline 18px icons. The labels say "Book Hotel", "Add to Calendar", and "Share Event" like adults who know what words mean.
 
 ### Still Standing
-- The Zoom meeting ID is just... right there in the HTML. In the open. Anyone can see it. Is that fine? Probably fine. (Update: we removed the NEB section. The Zoom link is gone. We are clean.)
 - On desktop the sticky bar disappears, which means desktop users only get *one* way to pre-register instead of *three*. Tragic.
 - The hotel reservation link is a Marriott deep link that could expire at any moment. We live on the edge.
-- The share menu has 10 platforms in it. For a landing page with two buttons. We have a 10-item share menu. We have problems.
+- The share menu has 10 platforms in it. For a landing page with three buttons. We have a 10-item share menu. We have problems.
+- There are still image files in the repo (`isa2-15.JPG`, `zp1.JPG`, `neb1.png`) that aren't used by the site. Digital ghosts. We could delete them but that feels like closure and we're not ready for that.
 
 ## FAQ
 
@@ -151,4 +154,4 @@ No license. This code is free like the coffee at the convention. Take it. We don
 
 ---
 
-*Built with love, sleep deprivation, energy drinks, and the kind of chaotic devotion that only exists between people who got sober together and refuse to act like my actual fucking family.*
+*Built with love, sleep deprivation, energy drinks, and the kind of chaotic devotion that only exists between found family who got sober together and somehow manage to act like my actual fucking family.*
