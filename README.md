@@ -1,23 +1,24 @@
 # NECYPAA 36 Landing Page
 
-> A single HTML file with more engineering in it than the committee has collective impulse control.
+> A single HTML file that took more engineering than the four-day convention it's advertising.
 
 ## What Is This
 
 A single `index.html` file that took more engineering effort than the entire convention budget. It's a mobile-first landing page for a regional young people's convention, and it has:
 
-- A dark gradient event hero card with zombie emojis because loading an 851KB flyer image was apparently too easy
+- A cosmic neon hero card with zero images because even CSS gradients were too much commitment for us
 - A button that says "Pre-Register" (it links to a website that also says "Pre-Register")
 - A hotel booking link (because apparently we needed a whole card for one hyperlink)
-- A calendar button with platform detection logic more complex than the event it's promoting
-- A Zoom link with someone's face next to it (mysterious)
+- A calendar button with platform detection logic more complex than the 4-day convention schedule
 - A sticky bottom bar because we looked at what every billion-dollar app does and said "yeah we need that too, for our two buttons"
+- A share menu with 10 platforms that shares a text message we wrote at 2am while arguing about whether insurance is a personality trait
 
 ## Tech Stack
 
 - **Framework:** None. Raw HTML like God intended.
-- **CSS:** 532 lines of hand-crafted artisanal stylesheet, inline, because we don't believe in separation of concerns. We believe in separation of nothing. This file is a monolith and so is this committee.
+- **CSS:** 580+ lines of hand-crafted artisanal stylesheet, inline, because we don't believe in separation of concerns. We believe in separation of nothing. This file is a monolith and so is this committee.
 - **JavaScript:** Vanilla. We wrote a full ICS calendar file generator from scratch instead of just linking a Google Form. We regret nothing.
+- **Images:** Zero. The entire visual experience is CSS gradients and one emoji. We have reached peak abstraction.
 - **Build Tools:** Opening the file in a browser.
 - **CI/CD:** Texting the file to someone who has access to the hosting.
 - **Testing:** "Does it look good on my phone?" — QA department (1 person, in bed, at 2am)
@@ -27,42 +28,53 @@ A single `index.html` file that took more engineering effort than the entire con
 ```
 necysite/
 ├── index.html    ← the entire application. the whole thing. that's it.
-├── neb1.png      ← someone's face. for the zoom link. don't ask questions
+├── isa2-15.JPG   ← a flyer we looked at once for color inspiration. not actually used.
+├── zp1.JPG       ← the zombie prom flyer. honorably discharged. gone. reduced to atoms.
 └── README.md     ← you are here. you are trapped. there is no escape
 ```
 
-> `zp1.JPG` has been honorably discharged. Its 851KB of flyer image have been replaced by ~180 lines of CSS and two zombie emojis. The information density per byte ratio improved by approximately infinity percent.
+> We deleted every image. We deleted the election link. The hero card is now five CSS gradients pretending to be a neon nightclub. Information density per byte is now technically infinite because there are zero bytes of image data. We are ascended.
 
 ## Features Nobody Asked For But We Built Anyway
 
-### Event Hero Card
-We replaced an 851KB flyer image with a hand-crafted dark gradient card featuring zombie emojis, a "Save the Date" pill badge, date/location rows with inline SVG icons, a three-column schedule grid, and radial gradient overlays for *atmosphere*. It weighs approximately 0KB because it's just HTML and CSS. We are unreasonable people.
+### Cosmic Neon Hero Card
+We replaced an 851KB flyer with approximately 847 lines of CSS featuring a five-stop deep space gradient (`#0d0221 → #150734 → #261447 → #1a0a3e → #0a1628`), four radial gradient light bursts in magenta and cyan, a neon magenta border with inset glow, text shadows that pulse with the power of a thousand suns, and a fireworks emoji that took 12 seconds to pick. It weighs 0KB. We are completely unhinged.
 
 ### Anonymity-Safe Share Menu
-The share button opens a scrollable dropdown with 10 platforms: WhatsApp, iMessage/SMS, Email, Telegram, FB Messenger, Signal, Discord, Snapchat, GroupMe, and Kik. No Twitter. No Facebook. No Instagram. Because this is AA and anonymity matters more than engagement metrics. Platforms with direct URL schemes (WhatsApp, SMS, Email, Telegram, Messenger) open natively. The rest copy the message to your clipboard with a toast that says "Copied — paste in [app name]" because we respect your privacy but we can't rewrite Snapchat's API.
+The share button opens a scrollable dropdown with 10 platforms: WhatsApp, iMessage/SMS, Email, Telegram, FB Messenger, Signal, Discord, Snapchat, GroupMe, and Kik. No Twitter. No Facebook. No Instagram. Because this is AA and anonymity matters more than engagement metrics. The menu itself has a deep purple gradient background, neon magenta border, and outer glow shadow — because even the share menu needs to match the vibe. Platforms with direct URL schemes open natively. The rest copy to clipboard with a toast. We wrote 50 lines of JavaScript to avoid using the native Web Share API because it includes Twitter and we have principles (that we discovered at 1:45am).
 
 ### Platform-Aware Calendar Integration
-The "Add to Calendar" button detects whether you're on iOS, Android, or desktop, and serves you the appropriate calendar format. This function is 52 lines long. The convention is one weekend.
+The "Add to Calendar" button detects whether you're on iOS, Android, or desktop, and serves you the appropriate calendar format. This function is 52 lines long. The convention is one weekend. The code-to-event ratio is approaching unity.
 
 ### Pulse Glow Animation
-The main CTA button literally pulses with a glowing aura on an infinite loop. Like a heartbeat. Like it's *alive*. Like it's *begging* you to pre-register.
-
+The main CTA button literally pulses with a glowing magenta aura on an infinite loop. Like a heartbeat. Like it's *alive*. Like it's *begging* you to pre-register. The button has not stopped pulsing since 2024. It will outlive us all.
 
 ## The Backstory
 
 Connecticut has never been known for anything. We are the state you drive through to get somewhere that matters. The loading screen between New York and Boston. Our biggest cultural export is insurance paperwork. The last interesting thing to happen in Hartford was the Colt revolver in 1836.
 
-So naturally, this is where we're throwing a four-day sober convention. In a Marriott. Over New Year's.
+So naturally, this is where we're throwing a **four-day** sober convention. In a Marriott. Over New Year's.
 
-NECYPAA 36 is the first Northeast Conference of Young People in AA hosted in Hartford, and the first one to run four days instead of three — because three days of sober people doing the Macarena at 3am in formalwear wasn't enough. We needed a fourth day. For what? Nobody agreed. Probably karaoke.
+NECYPAA 36 is the first Northeast Conference of Young People in AA hosted in Hartford, and the first one to run four days instead of three — because three days of sober people doing the Macarena at 3am in formalwear wasn't enough. We needed a fourth day. For what? Nobody agreed. Probably karaoke. Or a spontaneous intervention. Or someone will suggest we all go to the Wadsworth Atheneum and look at paintings while hungover on adrenaline and fellowship.
 
-We're also throwing a Zombie Prom with the Massachusetts committee as a unity event. Friday the 13th. Church basement. Thrift store suits. Fake blood. Two states' worth of sober people pretending they know how to dance. Someone will show up in a wig they bought that morning. Someone will refuse to participate and then be the loudest person there. $15 suggested contribution to dance with people who collectively owe more than that in library fines. Free if you're broke. We've all been broke.
+The convention starts New Year's Eve because apparently we looked at a calendar and said "yes, the night when everyone else is drinking, that's when we want 500 sober people in a hotel ballroom." There will be a countdown. There will be noise makers. Someone will suggest we sing the Serenity Prayer at midnight and someone else will suggest we sing Mr. Brightside and somehow both will happen simultaneously.
 
-This website exists because a flyer wasn't enough. Flyers are what normal organizations make. We are a committee that invented its own fake government positions and once seriously debated organ donation as a fundraising model. So instead of a JPEG we built a full webpage with calendar integration, a share button, and a CTA that pulses on an infinite loop because we do not know when to stop.
+$40 pre-registration. $50 at the door. Hotel rooms available now, pay later, because we understand that sober people are still broke people and credit cards are just future-you's problem.
 
-A freelance developer would charge maybe $200 to build this. We had an AI do it at 2am for $0. You are being asked to pay 7.5% of what a professional would have invoiced for this work to attend a zombie dance in a church basement. That is the value proposition. The button is still pulsing.
+This website exists because a flyer wasn't enough. Flyers are what normal organizations make. We are a committee that invented its own fake government positions and once seriously debated whether we could raffle off a kidney. So instead of a JPEG we built a full webpage with calendar integration, a share button with 10 anonymity-safe platforms, and a CTA that pulses on an infinite loop because we do not know when to stop.
+
+A freelance developer would charge maybe $300 to build this. We had an AI do it at 2am for $0. You are being asked to pay $40 to attend a four-day convention in Hartford, Connecticut, over New Year's Eve, in a Marriott, with 500 people who are all in recovery and somehow think this is a good idea. That is the value proposition. The button is still pulsing.
 
 We don't know what we're doing. We never have. We keep showing up and somehow that keeps being enough.
+
+## Current Build Notes
+
+- **Event:** NECYPAA 36 NYE Convention (not Zombie Prom — we killed the zombie, long live the fireworks)
+- **Theme:** Cosmic neon purple/magenta/cyan because we looked at a New Year's flyer and said "yes, gradients"
+- **Hero card:** Zero images. Pure CSS. Five gradients. Four radial bursts. One emoji. Infinite vibes.
+- **Accent color:** `#e040fb` (neon magenta) — previously red-orange, now we are cosmically ascended
+- **Share menu:** Now matches the hero card aesthetic. Deep purple. Neon border. Tighter. Cleaner. Still 10 platforms because we cannot stop.
+- **Calendar:** Exports 1 event now. Just the convention. The Zombie Prom is dead. The elections are over. We are streamlined.
 
 ## How to Run
 
@@ -74,14 +86,15 @@ That's it. That's the deployment.
 
 ## How to Contribute
 
-You don't. This is a dictatorship with a pulse-glowing button. But if you really want to help, join the group chat and survive 48 hours without someone trying to sell your organs or put you in an animal onesie.
+You don't. This is a dictatorship with a pulse-glowing button. But if you really want to help, join the group chat and survive 48 hours without someone trying to sell you ketamine on a Tuesday or suggesting we host the convention in an abandoned mall.
 
 ## Performance
 
 - **Lighthouse Score:** We've never checked and we're not going to start now
-- **Load Time:** Instant, because it's one HTML file and one image
-- **Bundle Size:** What bundle
-- **Time to Interactive:** The page is interactive the moment it exists. There is no hydration. There is no virtual DOM. There is only `index.html`.
+- **Load Time:** Instant, because it's one HTML file and zero images
+- **Bundle Size:** What bundle. There is no bundle. There is only `index.html` and the void.
+- **Time to Interactive:** The page is interactive the moment it exists. There is no hydration. There is no virtual DOM. There is only `index.html` and 580 lines of CSS that somehow make a neon nightclub.
+- **Image Weight:** 0 bytes. We deleted them all. We are image-pure. We are CSS-only. We have reached the singularity.
 
 ## Known Issues (Resolved Graveyard)
 
@@ -89,9 +102,9 @@ You don't. This is a dictatorship with a pulse-glowing button. But if you really
 - ~~The ICS file was missing `UID` and `DTSTAMP` fields~~ — technically a violation of RFC 5545 which means Outlook would've rejected it. We now generate both at runtime like professionals who definitely knew about RFC 5545 the whole time.
 - ~~The schedule in the calendar said "Hype 6:30-7:30" which overlaps with "Meeting 7:00-8:00."~~ Fixed. It's 6:30-7:00. We can read a flyer now, apparently.
 - ~~No meta description or Open Graph tags~~ — sharing this link on iMessage would've shown a blank preview with zero context. Now it shows the event title and description like a real website made by real adults.
-- ~~No favicon~~ — Added a 🧟 emoji favicon via inline SVG data URI because we refuse to add unnecessary files to this project.
+- ~~No favicon~~ — Added a 🧟 emoji favicon via inline SVG data URI because we refuse to add unnecessary files to this project. Then we changed it to 🎆 because the vibe shifted.
 - ~~The Zoom avatar alt text just said "Join Meeting"~~ — screen readers deserve better than that.
-- ~~851KB flyer image as the entire hero section~~ — Replaced with a CSS gradient card. The flyer has been relieved of duty. It served with honor.
+- ~~851KB flyer image as the entire hero section~~ — Replaced with a CSS gradient card. The flyer has been relieved of duty. It served with honor. Then we removed the replacement flyer too. Now there are no images. Only gradients.
 - ~~Aggressive double-tap prevention~~ — Was calling `preventDefault()` on all rapid taps globally, potentially blocking legitimate interactions. Removed. You can double-tap freely now. Go wild.
 - ~~Lightbox for a flyer that no longer exists~~ — Removed 60+ lines of lightbox CSS, HTML, and JS. Gone. Reduced to atoms.
 - ~~Sticky bar had a useless "Flyer" button~~ — Replaced with a Hotel booking link because that's actually useful.
@@ -102,13 +115,15 @@ You don't. This is a dictatorship with a pulse-glowing button. But if you really
 - ~~Signal icon was Telegram's icon~~ — Copy-pasted the wrong SVG path. Signal had a paper plane. Signal is not Telegram. Fixed.
 - ~~Clipboard share links weren't keyboard-accessible~~ — The `<a>` tags for Signal, Discord, Snapchat, GroupMe, and Kik had no `href`, making them invisible to keyboard navigation. Added `href="#"` with `preventDefault()` in JS.
 - ~~Dead CSS variables~~ — `--teal-hover` and `--indigo-hover` were declared but never used. Removed.
+- ~~Zombie Prom still mentioned in calendar data~~ — Removed. The event is over. It's done. We have moved on. The calendar now exports 1 event: the convention. We are no longer time capsules.
+- ~~Host Committee Elections in calendar and NEB section~~ — Also removed. The elections happened. They're over. The NEB section is gone. The calendar is clean. We are streamlined.
+- ~~Share menu looked like it was from a different website~~ — Restyled with the deep purple gradient, neon magenta border, and tighter proportions. Now it looks like it belongs. Barely.
 
 ### Still Standing
-- The Zoom meeting ID is just... right there in the HTML. In the open. Anyone can see it. Is that fine? Probably fine.
+- The Zoom meeting ID is just... right there in the HTML. In the open. Anyone can see it. Is that fine? Probably fine. (Update: we removed the NEB section. The Zoom link is gone. We are clean.)
 - On desktop the sticky bar disappears, which means desktop users only get *one* way to pre-register instead of *three*. Tragic.
 - The hotel reservation link is a Marriott deep link that could expire at any moment. We live on the edge.
-- `neb1.png` is 492KB for a 42×42px avatar now. Still absurd. We'll deal with it when we feel like it.
-- The share menu has 10 platforms in it. For a landing page with two buttons. We have a 10-item share menu.
+- The share menu has 10 platforms in it. For a landing page with two buttons. We have a 10-item share menu. We have problems.
 
 ## FAQ
 
@@ -121,8 +136,14 @@ A: Someone left their phone for two hours and came back to a debate about whethe
 **Q: Why is the README like this?**
 A: This place is a prison.
 
+**Q: Why did you delete all the images?**
+A: Images are a commitment. CSS gradients are a mood. We are not ready for that kind of relationship with external assets.
+
 **Q: Should I pre-register?**
 A: The button is pulsing. It will not stop pulsing. You know what you have to do.
+
+**Q: Four days? Really?**
+A: Three days wasn't enough. We don't know why. It just wasn't. The fourth day is for... something. We'll figure it out. Probably a second talent show. Or a third. Or someone will suggest we all write amends letters to our landlords and it will get weird.
 
 ## License
 

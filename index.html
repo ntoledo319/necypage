@@ -6,12 +6,12 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="theme-color" content="#faf7f2">
-    <meta name="description" content="NECYPAA 36 Zombie Prom — Friday, February 13th at Enfield United Church of Christ. Hype, meeting, and dance til dawn. Hosted by NECYPAA 36 and The Bay State Bid for NECYPAA.">
-    <meta property="og:title" content="NECYPAA 36 — Zombie Prom">
-    <meta property="og:description" content="Save the Date! Friday, February 13th. Hype 6:30 PM · Meeting 7:00 PM · Dance 8:00 PM – Dawn. Enfield, CT. Suggested contribution $15.">
+    <meta name="description" content="NECYPAA 36 — The 36th Northeast Conference of Young People in AA. 4-Day Convention, Dec 31 2026 – Jan 3 2027 at the Hartford Marriott Downtown. Pre-register for $40 at necypaact.com.">
+    <meta property="og:title" content="NECYPAA 36 — New Year's Eve Convention">
+    <meta property="og:description" content="4-Day YPAA Convention · Dec 31, 2026 – Jan 3, 2027 · Hartford Marriott Downtown · Pre-Register $40 · Book Rooms Now, Pay Later.">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧟</text></svg>">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎆</text></svg>">
     <title>NECYPAA 36</title>
     <style>
         /* ── Reset & Base ─────────────────────────────── */
@@ -26,9 +26,9 @@
             --bg-card: #ffffff;
             --text: #1a1a1a;
             --text-muted: #6b6360;
-            --accent: #e8614d;
-            --accent-hover: #d4503e;
-            --accent-glow: rgba(232, 97, 77, 0.25);
+            --accent: #e040fb;
+            --accent-hover: #c030d8;
+            --accent-glow: rgba(224, 64, 251, 0.25);
             --teal: #2a9d8f;
             --indigo: #5a67d8;
             --shadow-sm: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
@@ -159,10 +159,10 @@
         /* ── Event Hero Card ────────────────────────────── */
         .event-hero {
             position: relative;
-            background: linear-gradient(145deg, #1a1a2e, #16213e, #0f3460);
+            background: linear-gradient(145deg, #0d0221, #150734 30%, #261447 55%, #1a0a3e 75%, #0a1628);
             border-radius: var(--radius);
             overflow: visible;
-            box-shadow: var(--shadow-poster);
+            box-shadow: var(--shadow-poster), 0 0 40px rgba(224,64,251,0.08), 0 0 80px rgba(0,200,255,0.04);
             color: #fff;
             padding: 18px 18px 14px;
             text-align: center;
@@ -177,8 +177,11 @@
             content: '';
             position: absolute;
             inset: 0;
-            background: radial-gradient(ellipse at 30% 0%, rgba(232,97,77,0.15) 0%, transparent 60%),
-                        radial-gradient(ellipse at 70% 100%, rgba(90,103,216,0.12) 0%, transparent 60%);
+            background: radial-gradient(ellipse at 20% 0%, rgba(224,64,251,0.28) 0%, transparent 50%),
+                        radial-gradient(ellipse at 85% 15%, rgba(0,200,255,0.2) 0%, transparent 45%),
+                        radial-gradient(ellipse at 50% 100%, rgba(233,30,99,0.18) 0%, transparent 50%),
+                        radial-gradient(ellipse at 5% 70%, rgba(63,81,181,0.1) 0%, transparent 40%);
+            border-radius: var(--radius);
             pointer-events: none;
         }
 
@@ -187,14 +190,15 @@
             position: absolute;
             inset: 0;
             border-radius: var(--radius);
-            border: 1px solid rgba(255,255,255,0.08);
+            border: 1px solid rgba(224,64,251,0.15);
+            box-shadow: inset 0 0 30px rgba(224,64,251,0.04), inset 0 0 60px rgba(0,200,255,0.02);
             pointer-events: none;
         }
 
         .event-tag {
             display: inline-block;
-            padding: 3px 12px;
-            background: var(--accent);
+            padding: 3px 14px;
+            background: linear-gradient(135deg, var(--accent), #7c4dff);
             border-radius: 100px;
             font-size: 10px;
             font-weight: 700;
@@ -202,27 +206,30 @@
             text-transform: uppercase;
             margin-bottom: 8px;
             position: relative;
+            box-shadow: 0 0 12px rgba(224,64,251,0.3);
         }
 
         .event-emoji {
-            font-size: 36px;
+            font-size: 44px;
             line-height: 1;
-            margin-bottom: 6px;
+            margin-bottom: 8px;
             position: relative;
+            filter: drop-shadow(0 0 12px rgba(224,64,251,0.3));
         }
 
         .event-title {
-            font-size: 24px;
+            font-size: 28px;
             font-weight: 800;
-            letter-spacing: -0.5px;
+            letter-spacing: 1.5px;
             line-height: 1.15;
             margin-bottom: 2px;
             position: relative;
+            text-shadow: 0 0 20px rgba(224,64,251,0.3), 0 0 40px rgba(224,64,251,0.1);
         }
 
         .event-subtitle {
             font-size: 13px;
-            color: rgba(255,255,255,0.6);
+            color: rgba(200,185,255,0.7);
             margin-bottom: 10px;
             position: relative;
         }
@@ -238,9 +245,10 @@
             display: flex;
             align-items: center;
             gap: 8px;
-            background: rgba(255,255,255,0.08);
+            background: rgba(255,255,255,0.1);
             border-radius: var(--radius-sm);
             padding: 7px 12px;
+            border: 1px solid rgba(255,255,255,0.06);
             font-size: 12px;
             text-align: left;
         }
@@ -276,14 +284,16 @@
         .schedule-block {
             background: rgba(255,255,255,0.06);
             border-radius: 10px;
-            padding: 7px 6px;
+            padding: 8px 6px;
             text-align: center;
+            border: 1px solid rgba(224,64,251,0.12);
         }
 
         .schedule-time {
-            font-size: 14px;
+            font-size: 16px;
             font-weight: 700;
             color: #fff;
+            text-shadow: 0 0 10px rgba(224,64,251,0.2);
         }
 
         .schedule-label {
@@ -296,10 +306,13 @@
         }
 
         .event-cost {
-            margin-top: 6px;
-            font-size: 12px;
-            color: rgba(255,255,255,0.45);
+            margin-top: 8px;
+            font-size: 10px;
+            color: rgba(255,255,255,0.35);
             position: relative;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            font-weight: 600;
         }
 
         .event-share-btn {
@@ -314,8 +327,8 @@
             height: 48px;
             padding: 0 14px;
             border-radius: 100px;
-            border: none;
-            background: rgba(255,255,255,0.22);
+            border: 1px solid rgba(224,64,251,0.2);
+            background: rgba(224,64,251,0.15);
             color: #fff;
             cursor: pointer;
             transition: transform 0.15s, background 0.2s;
@@ -428,59 +441,6 @@
             line-height: 1.3;
         }
 
-        /* ── NEB / Zoom Section ───────────────────────── */
-        .neb-section {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            padding: 10px 14px;
-            background: var(--bg-card);
-            border-radius: var(--radius);
-            box-shadow: var(--shadow-sm);
-            border: 1px solid rgba(0,0,0,0.04);
-            text-decoration: none;
-            color: var(--text);
-            transition: box-shadow 0.2s, transform 0.15s;
-            flex-shrink: 0;
-        }
-
-        .neb-section:active {
-            transform: scale(0.98);
-            box-shadow: var(--shadow-md);
-        }
-
-        .neb-avatar {
-            width: 42px;
-            height: 42px;
-            border-radius: 50%;
-            object-fit: cover;
-            box-shadow: var(--shadow-sm);
-            border: 2px solid rgba(0,0,0,0.06);
-            flex-shrink: 0;
-        }
-
-        .neb-info {
-            flex: 1;
-            min-width: 0;
-        }
-
-        .neb-title {
-            font-size: 14px;
-            font-weight: 700;
-        }
-
-        .neb-subtitle {
-            font-size: 12px;
-            color: var(--text-muted);
-        }
-
-        .neb-arrow {
-            width: 18px;
-            height: 18px;
-            color: var(--text-muted);
-            flex-shrink: 0;
-        }
-
         /* ── Sticky Bottom Bar ────────────────────────── */
         .sticky-bar {
             position: fixed;
@@ -577,18 +537,18 @@
             position: absolute;
             top: 64px;
             right: 12px;
-            background: rgba(30,30,50,0.95);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-radius: 12px;
-            border: 1px solid rgba(255,255,255,0.12);
-            padding: 6px;
+            background: linear-gradient(180deg, rgba(22,8,52,0.97), rgba(13,2,33,0.97));
+            backdrop-filter: blur(20px) saturate(1.4);
+            -webkit-backdrop-filter: blur(20px) saturate(1.4);
+            border-radius: 14px;
+            border: 1px solid rgba(224,64,251,0.15);
+            padding: 5px;
             display: none;
             flex-direction: column;
-            gap: 2px;
+            gap: 1px;
             z-index: 10;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.3);
-            min-width: 200px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.45), 0 0 20px rgba(224,64,251,0.08);
+            min-width: 190px;
             max-height: 340px;
             overflow-y: auto;
             -webkit-overflow-scrolling: touch;
@@ -601,12 +561,12 @@
         .share-option {
             display: flex;
             align-items: center;
-            gap: 12px;
-            padding: 14px 16px;
-            border-radius: 10px;
+            gap: 10px;
+            padding: 10px 13px;
+            border-radius: 8px;
             text-decoration: none;
-            color: rgba(255,255,255,0.9);
-            font-size: 15px;
+            color: rgba(255,255,255,0.8);
+            font-size: 13.5px;
             font-weight: 600;
             font-family: var(--font);
             border: none;
@@ -618,13 +578,14 @@
 
         .share-option:active,
         .share-option:hover {
-            background: rgba(255,255,255,0.1);
+            background: rgba(224,64,251,0.12);
         }
 
         .share-option .icon-sm {
-            width: 20px;
-            height: 20px;
+            width: 18px;
+            height: 18px;
             flex-shrink: 0;
+            opacity: 0.7;
         }
 
         /* ── Desktop / larger screens ─────────────────── */
@@ -709,45 +670,45 @@
                     Kik
                 </a>
             </div>
-            <div class="event-tag">Save the Date</div>
-            <div class="event-emoji">🧟‍♂️🧟‍♀️</div>
-            <h1 class="event-title">Zombie Prom</h1>
-            <p class="event-subtitle">Hosted by NECYPAA 36 &amp; The Bay State Bid</p>
+            <div class="event-tag">New Year's Eve</div>
+            <div class="event-emoji">🎆✨</div>
+            <h1 class="event-title">NECYPAA XXXVI</h1>
+            <p class="event-subtitle">4 Day YPAA Convention &middot; Hartford, CT</p>
 
             <div class="event-details">
                 <div class="event-detail-row">
                     <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
                     <div>
                         <div class="event-detail-label">Date</div>
-                        <div class="event-detail-value">Friday, February 13th</div>
+                        <div class="event-detail-value">Dec 31, 2026 &ndash; Jan 3, 2027</div>
                     </div>
                 </div>
                 <div class="event-detail-row">
                     <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
                     <div>
                         <div class="event-detail-label">Location</div>
-                        <div class="event-detail-value">Enfield United Church of Christ</div>
-                        <div style="font-size:11px;color:rgba(255,255,255,0.45)">1295 Enfield St, Enfield, CT 06082</div>
+                        <div class="event-detail-value">Hartford Marriott Downtown</div>
+                        <div style="font-size:11px;color:rgba(255,255,255,0.45)">Hartford, CT &middot; Book Rooms Now, Pay Later</div>
                     </div>
                 </div>
             </div>
 
             <div class="event-schedule">
                 <div class="schedule-block">
-                    <div class="schedule-time">6:30</div>
-                    <div class="schedule-label">Hype</div>
+                    <div class="schedule-time">4</div>
+                    <div class="schedule-label">Days</div>
                 </div>
                 <div class="schedule-block">
-                    <div class="schedule-time">7:00</div>
-                    <div class="schedule-label">Meeting</div>
+                    <div class="schedule-time">NYE</div>
+                    <div class="schedule-label">Kickoff</div>
                 </div>
                 <div class="schedule-block">
-                    <div class="schedule-time">8:00</div>
-                    <div class="schedule-label">Dance</div>
+                    <div class="schedule-time">$40</div>
+                    <div class="schedule-label">Pre-Reg</div>
                 </div>
             </div>
 
-            <div class="event-cost">Suggested Contribution: $15</div>
+            <div class="event-cost">Northeast Convention of Young People in AA</div>
         </section>
 
         <!-- Primary CTA -->
@@ -787,17 +748,6 @@
             </button>
         </div>
 
-        <!-- NEB / Zoom -->
-        <a href="https://us06web.zoom.us/j/5692382899?omn=86491828124"
-           class="neb-section fade-up fade-up-d4" target="_blank" rel="noopener">
-            <img src="neb1.png" alt="NECYPAA CT Host Committee Elections flyer" class="neb-avatar">
-            <div class="neb-info">
-                <div class="neb-title">Host Committee Elections</div>
-                <div class="neb-subtitle">Sun, Feb 15th · 2:00 PM · Zoom</div>
-            </div>
-            <svg class="neb-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
-        </a>
-
     </main>
 
     <!-- Sticky Bottom Bar (mobile) -->
@@ -824,7 +774,7 @@
         const toast = document.getElementById('toast');
         let toastTimer;
 
-        const shareText = 'Zombie Prom! Friday, Feb 13th. Hype 6:30, Meeting 7:00, Dance 8:00 til dawn. Enfield, CT. Suggested contribution $15.';
+        const shareText = 'NECYPAA 36! 4-Day YPAA Convention, Dec 31 2026 - Jan 3 2027. Hartford Marriott Downtown. Pre-register $40 at necypaact.com';
         const shareUrl = window.location.href;
         const fullMsg = shareText + '\n' + shareUrl;
 
@@ -838,7 +788,7 @@
         // Set share hrefs — direct URL scheme platforms
         document.getElementById('share-whatsapp').href = 'https://wa.me/?text=' + encodeURIComponent(fullMsg);
         document.getElementById('share-sms').href = 'sms:&body=' + encodeURIComponent(fullMsg);
-        document.getElementById('share-email').href = 'mailto:?subject=' + encodeURIComponent('NECYPAA 36 — Zombie Prom') + '&body=' + encodeURIComponent(fullMsg);
+        document.getElementById('share-email').href = 'mailto:?subject=' + encodeURIComponent('NECYPAA 36 - NYE Convention') + '&body=' + encodeURIComponent(fullMsg);
         document.getElementById('share-telegram').href = 'https://t.me/share/url?url=' + encodeURIComponent(shareUrl) + '&text=' + encodeURIComponent(shareText);
         document.getElementById('share-messenger').href = 'fb-messenger://share/?link=' + encodeURIComponent(shareUrl);
 
@@ -879,26 +829,6 @@
         /* ── Calendar ─────────────────────────────────── */
         var calEvents = [
             {
-                title: 'NECYPAA 36 Zombie Prom',
-                start: '20260213T183000',
-                end: '20260214T020000',
-                startZ: '20260213T233000Z',
-                endZ: '20260214T070000Z',
-                location: 'Enfield United Church of Christ, 1295 Enfield St, Enfield, CT 06082',
-                description: 'Zombie Prom — Hosted by NECYPAA 36 & The Bay State Bid\\nHype 6:30-7:00 PM\\nMeeting 7:00-8:00 PM\\nDance 8:00 PM - Dawn\\nSuggested Contribution: $15\\nhttps://www.necypaact.com',
-                allDay: false
-            },
-            {
-                title: 'Host Committee Elections — NECYPAA CT',
-                start: '20260215T140000',
-                end: '20260215T150000',
-                startZ: '20260215T190000Z',
-                endZ: '20260215T200000Z',
-                location: 'Zoom',
-                description: 'NECYPAA CT Host Committee Elections\\nZoom: https://us06web.zoom.us/j/5692382899?omn=86491828124',
-                allDay: false
-            },
-            {
                 title: 'NECYPAA 36 — 36th Northeast Conference of Young People in AA',
                 start: '20261231',
                 end: '20270104',
@@ -923,14 +853,14 @@
                 return;
             }
 
-            // Android + Desktop — download ICS with all 3 events
+            // Android + Desktop — download ICS with the convention event
             var link = document.createElement('a');
             link.href = url;
-            link.download = 'necypaa-36-events.ics';
+            link.download = 'necypaa-36.ics';
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
-            showToast('3 events added to calendar');
+            showToast('Added to calendar');
         }
 
         function createMultiICS(events) {
