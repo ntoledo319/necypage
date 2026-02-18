@@ -74,7 +74,7 @@ We don't know what we're doing. We never have. We keep showing up and somehow th
 - **Hero card:** Zero images. Pure CSS. Five gradients. Four radial bursts. One emoji. Infinite vibes.
 - **Accent color:** `#e040fb` (neon magenta) — previously red-orange, now we are cosmically ascended
 - **Share button:** Moved from floating hero overlay to actions grid. Now opens a bottom sheet instead of a dropdown. Three-column grid: Book Hotel | Add to Calendar | Share Event. Integrated. Clean. Still 10 platforms because we cannot stop.
-- **Action cards:** Removed the chunky colored icon boxes. Now subtle glass cards with inline icons. Less stock-image-button-y. More refined. We grew up.
+- **Action cards:** Color-coded gradient buttons. Teal for hotel (calming, hospitality vibes). Indigo for calendar (organization energy). Magenta for share (matches the pulsing CTA because color theory is real and we finally learned it at 3am).
 - **Calendar:** Exports 1 event now. Just the convention. The Zombie Prom is dead. The elections are over. We are streamlined.
 
 ## How to Run
@@ -120,7 +120,8 @@ You don't. This is a dictatorship with a pulse-glowing button. But if you really
 - ~~Host Committee Elections in calendar and NEB section~~ — Also removed. The elections happened. They're over. The NEB section is gone. The calendar is clean. We are streamlined.
 - ~~Share menu looked like it was from a different website~~ — Restyled with the deep purple gradient, neon magenta border, and tighter proportions. Now it looks like it belongs. Barely.
 - ~~Share button was a floating pill in the hero card~~ — It popped out and broke the visual flow. Moved it to the actions grid as a third card. Now it's Hotel | Calendar | Share. The share menu is now a bottom sheet that slides up instead of a dropdown. We deleted 35 lines of floating button CSS. The hero card is clean. The page flows. We are at peace.
-- ~~Action cards had chunky colored icon boxes~~ — Looked like stock image buttons from a 2019 UI kit. Removed the icon boxes entirely. Now they're subtle glass cards with inline 18px icons. The labels say "Book Hotel", "Add to Calendar", and "Share Event" like adults who know what words mean.
+- ~~Action cards had chunky colored icon boxes~~ — Looked like stock image buttons from a 2019 UI kit. Removed the icon boxes entirely. Made them subtle glass cards. Then realized glass cards are invisible on a page that's already all gradients and glass. We are not smart.
+- ~~Action cards were invisible glass on glass~~ — Applied actual color theory. Each card now has a distinct gradient: teal (`#2a9d8f → #21867a`) for hotel, indigo (`#5a67d8 → #4c51bf`) for calendar, magenta (`#e040fb → #c030d8`) for share. White icons, white text, drop shadows. They exist now. You can see them. We have learned that visibility is a feature.
 
 ### Still Standing
 - On desktop the sticky bar disappears, which means desktop users only get *one* way to pre-register instead of *three*. Tragic.
